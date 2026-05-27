@@ -1,0 +1,14 @@
+{
+  "properties": {
+    "connectionParameters": {},
+    "iconBrandColor": "#059669",
+    "capabilities": [],
+    "publisher": "Glimpse Ltd (OpenAccountants)",
+    "stackOwner": "Glimpse Ltd",
+    "policyTemplateInstances": [],
+    "categories": "Productivity;Finance;AI",
+    "isMcpServer": true,
+    "mcpServerUrl": "https://www.openaccountants.com/api/mcp",
+    "mcpServerTransport": "streamable-http"
+  }
+}

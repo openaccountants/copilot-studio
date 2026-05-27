@@ -1,0 +1,8 @@
+{
+  "apiDefinitionUrl": "apiDefinition.swagger.json",
+  "apiPropertiesUrl": "apiProperties.json",
+  "iconUrl": "icon.png",
+  "publisher": "Glimpse Ltd (OpenAccountants)",
+  "connectorCategory": "premium",
+  "isMcpServer": true
+}
