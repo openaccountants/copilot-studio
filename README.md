@@ -1,8 +1,8 @@
 # OpenAccountants for Microsoft Copilot Studio
 
-Two ways to use [OpenAccountants](https://www.openaccountants.com) tax Guides inside Microsoft Copilot Studio via MCP.
+Two ways to use [OpenAccountants](https://www.openaccountants.com) tax skills inside Microsoft Copilot Studio via MCP.
 
-Guides include accountant-reviewed versions and source-cited drafts. Check the [current catalogue](https://www.openaccountants.com/skills) and [review method](https://www.openaccountants.com/review-method) for each Guide's review status, reviewer, version and review date. Authorship or a jurisdiction lead's name does not establish professional review of every Guide version.
+Skills include accountant-reviewed versions and source-cited drafts. Check the [current catalogue](https://www.openaccountants.com/skills) and [review method](https://www.openaccountants.com/review-method) for each skill's review status, reviewer, version and review date. Authorship or a jurisdiction lead's name does not establish professional review of every skill version.
 
 ## Option A — add to your own tenant (today, ~3 minutes)
 
@@ -16,11 +16,11 @@ Any Copilot Studio admin can add OpenAccountants as an MCP server directly. No c
    - **Server name:** `OpenAccountants`
    - **Server URL:** `https://www.openaccountants.com/api/mcp`
    - **Authentication:** None
-   - **Description:** *Tax Guides with sources and published review status via OpenAccountants MCP.*
+   - **Description:** *Tax skills with sources and published review status via OpenAccountants MCP.*
 4. Click **Add**. The Copilot Studio wizard introspects the MCP server and registers all 5 tools (`start`, `list_skills`, `get_skill`, `get_skill_sections`, `search_skills`).
 5. Save and publish your agent.
 
-Your agent now has on-demand access to every published OpenAccountants tax skill. Preserve the fetched Guide's review status in the answer. The [Calendly](https://calendly.com/openaccountants-info/30min) handoff provides a way to seek professional review.
+Your agent now has on-demand access to every published OpenAccountants tax skill. Preserve the fetched skill's review status in the answer. The [Calendly](https://calendly.com/openaccountants-info/30min) handoff provides a way to seek professional review.
 
 📸 **Screenshots:** see [`docs/screenshots.md`](./docs/screenshots.md).
 
@@ -60,4 +60,4 @@ These skills produce **working papers, not filed returns**. Every output preserv
 
 ## Licence
 
-MIT for this repository. Guide content has separate terms from this wrapper. The source repository's [licensing document](https://github.com/openaccountants/openaccountants/blob/main/LICENSING.md) describes the source-available OA Guide License, commercial options, third-party copyleft exceptions and prior AGPL releases. Check the terms for the Guide version you use.
+MIT for this repository. Skill content has separate terms from this wrapper. The source repository's [licensing document](https://github.com/openaccountants/openaccountants/blob/main/LICENSING.md) describes the source-available Open Accountants Skills License, commercial options, third-party copyleft exceptions and prior AGPL releases. Check the terms for the skill version you use.

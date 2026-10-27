@@ -20,7 +20,7 @@ Fill in:
 - **Server name:** `OpenAccountants`
 - **Server URL:** `https://www.openaccountants.com/api/mcp`
 - **Authentication:** None (the OpenAccountants MCP server is public, read-only, rate-limited)
-- **Description:** *Tax Guides with sources and version-specific review status. Check each fetched version's published review record.*
+- **Description:** *Tax skills with sources and version-specific review status. Check each fetched version's published review record.*
 
 Click **Add server**.
 
@@ -52,7 +52,7 @@ After publishing, ask your agent:
 
 > **You:** I'm a Maltese freelancer earning EUR 45,000 from foreign clients. What VAT obligations do I have?
 >
-> **Agent:** *Calls `start({intent: "VAT", jurisdiction: "MT"})` → sees malta-vat-return in the plan → calls `get_skill({slug: "malta-vat-return"})` → walks the user through Article 10 vs Article 11, the EUR 35,000 threshold, EU reverse charge logic, and cites the fetched Guide and its published review status. Name a reviewer only when that version's record identifies one; preserve its available Calendly link.*
+> **Agent:** *Calls `start({intent: "VAT", jurisdiction: "MT"})` → sees malta-vat-return in the plan → calls `get_skill({slug: "malta-vat-return"})` → walks the user through Article 10 vs Article 11, the EUR 35,000 threshold, EU reverse charge logic, and cites the fetched skill and its published review status. Name a reviewer only when that version's record identifies one; preserve its available Calendly link.*
 
 If you get this kind of response, the integration is working.
 
