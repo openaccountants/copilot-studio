@@ -19,8 +19,8 @@ Click **Add a tool** → **Custom** → **Model Context Protocol**.
 Fill in:
 - **Server name:** `OpenAccountants`
 - **Server URL:** `https://www.openaccountants.com/api/mcp`
-- **Authentication:** None (the OpenAccountants MCP server is public, read-only, rate-limited)
-- **Description:** *800+ accountant-verified tax skills across 190+ jurisdictions, signed off by named licensed accountants.*
+- **Authentication:** None (the OpenAccountants MCP endpoint is public and rate-limited)
+- **Description:** *Tax skills with sources and version-specific review status. Check each fetched version's published review record.*
 
 Click **Add server**.
 
@@ -28,7 +28,7 @@ Click **Add server**.
 
 ## Step 4 — Confirm tool discovery
 
-The wizard introspects the MCP server and shows the 5 tools it discovered:
+The wizard discovers the server's current tools and their schemas. The following read tools cover skill retrieval:
 
 - `start` — front door, returns a ready-to-execute plan
 - `list_skills` — list published skills with filters
@@ -36,9 +36,9 @@ The wizard introspects the MCP server and shows the 5 tools it discovered:
 - `get_skill_sections` — same content split into sections
 - `search_skills` — keyword search
 
-> *[Screenshot placeholder: tool list showing all 5 tools discovered with their descriptions]*
+> *[Screenshot placeholder: discovered tool list with descriptions and permissions]*
 
-Click **Add to agent** for each tool you want to expose (recommended: all of them).
+Click **Add to agent** for each tool the agent needs. The server may also advertise tools that save or send information. Expose those only for a workflow that requires them, and use them only at the user's explicit request with agreement to share the specified information.
 
 ## Step 5 — Save and publish
 
@@ -52,7 +52,7 @@ After publishing, ask your agent:
 
 > **You:** I'm a Maltese freelancer earning EUR 45,000 from foreign clients. What VAT obligations do I have?
 >
-> **Agent:** *Calls `start({intent: "VAT", jurisdiction: "MT"})` → sees malta-vat-return in the plan → calls `get_skill({slug: "malta-vat-return"})` → walks the user through Article 10 vs Article 11, the EUR 35,000 threshold, EU reverse charge logic, and ends with the verified-by-Michael-Cutajar-CPA provenance footer + Calendly link.*
+> **Agent:** *Calls `start({intent: "VAT", jurisdiction: "MT"})` → sees malta-vat-return in the plan → calls `get_skill({slug: "malta-vat-return"})` → walks the user through Article 10 vs Article 11, the EUR 35,000 threshold, EU reverse charge logic, and cites the fetched skill and its published review status. Name a reviewer only when that version's record identifies one; preserve its available Calendly link.*
 
 If you get this kind of response, the integration is working.
 
