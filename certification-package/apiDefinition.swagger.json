@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "OpenAccountants",
-    "description": "On-demand access to 800+ accountant-verified tax skills across 190+ jurisdictions, exposed via a public Model Context Protocol (MCP) server. Every skill is signed off by a named licensed accountant. Covers income tax, VAT/GST, payroll, formation, cross-border issues, and more. Useful for Copilot Studio agents that need accountant-grade tax computation or jurisdiction-specific accounting context.",
+    "description": "On-demand access to 800+ tax skills across 190+ jurisdictions through a public Model Context Protocol (MCP) server. Coverage and professional review vary by skill and version. Check the fetched version's published review record before attributing professional review. Covers income tax, VAT/GST, payroll, formation and cross-border issues. Useful for Copilot Studio agents that need source-cited tax and accounting context.",
     "version": "1.0.0",
     "contact": {
       "name": "OpenAccountants",
@@ -22,7 +22,7 @@
     "/mcp": {
       "post": {
         "summary": "Call the OpenAccountants MCP server",
-        "description": "JSON-RPC 2.0 endpoint exposing the Model Context Protocol tool surface. Use the Copilot Studio MCP onboarding wizard to discover the available tools automatically. Available tools: start, list_skills, get_skill, get_skill_sections, search_skills.",
+        "description": "JSON-RPC 2.0 endpoint exposing the Model Context Protocol tool surface. Use the Copilot Studio MCP onboarding wizard to discover the current tools and their schemas. Read tools include start, list_skills, get_skill, get_skill_sections and search_skills.",
         "operationId": "McpInvoke",
         "x-ms-visibility": "important",
         "parameters": [

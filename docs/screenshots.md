@@ -19,7 +19,7 @@ Click **Add a tool** → **Custom** → **Model Context Protocol**.
 Fill in:
 - **Server name:** `OpenAccountants`
 - **Server URL:** `https://www.openaccountants.com/api/mcp`
-- **Authentication:** None (the OpenAccountants MCP server is public, read-only, rate-limited)
+- **Authentication:** None (the OpenAccountants MCP endpoint is public and rate-limited)
 - **Description:** *Tax skills with sources and version-specific review status. Check each fetched version's published review record.*
 
 Click **Add server**.
@@ -28,7 +28,7 @@ Click **Add server**.
 
 ## Step 4 — Confirm tool discovery
 
-The wizard introspects the MCP server and shows the 5 tools it discovered:
+The wizard discovers the server's current tools and their schemas. The following read tools cover skill retrieval:
 
 - `start` — front door, returns a ready-to-execute plan
 - `list_skills` — list published skills with filters
@@ -36,9 +36,9 @@ The wizard introspects the MCP server and shows the 5 tools it discovered:
 - `get_skill_sections` — same content split into sections
 - `search_skills` — keyword search
 
-> *[Screenshot placeholder: tool list showing all 5 tools discovered with their descriptions]*
+> *[Screenshot placeholder: discovered tool list with descriptions and permissions]*
 
-Click **Add to agent** for each tool you want to expose (recommended: all of them).
+Click **Add to agent** for each tool the agent needs. The server may also advertise tools that save or send information. Expose those only for a workflow that requires them, and use them only at the user's explicit request with agreement to share the specified information.
 
 ## Step 5 — Save and publish
 

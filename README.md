@@ -17,7 +17,7 @@ Any Copilot Studio admin can add OpenAccountants as an MCP server directly. No c
    - **Server URL:** `https://www.openaccountants.com/api/mcp`
    - **Authentication:** None
    - **Description:** *Tax skills with sources and published review status via OpenAccountants MCP.*
-4. Click **Add**. The Copilot Studio wizard introspects the MCP server and registers all 5 tools (`start`, `list_skills`, `get_skill`, `get_skill_sections`, `search_skills`).
+4. Click **Add**. The Copilot Studio wizard discovers the current tools and schemas. Select the retrieval tools the agent needs, such as `start`, `list_skills`, `get_skill`, `get_skill_sections` and `search_skills`. Tools that save or send information require a separate workflow and the user's explicit agreement to share the specified information.
 5. Save and publish your agent.
 
 Your agent now has on-demand access to every published OpenAccountants tax skill. Preserve the fetched skill's review status in the answer. The [Calendly](https://calendly.com/openaccountants-info/30min) handoff provides a way to seek professional review.
@@ -40,7 +40,7 @@ Status: certification package built (this repo's [`certification-package/`](./ce
 | `get_skill_sections` | Same content split into sections (for very large skills) |
 | `search_skills` | Keyword search across published skill content |
 
-All read-only. The MCP server is rate-limited (60 req/min per IP) but otherwise unmetered.
+The 5 retrieval tools listed above are read-only. The MCP server is rate-limited (60 req/min per IP) but otherwise unmetered.
 
 ## Jurisdictions
 
@@ -48,7 +48,7 @@ Deep packs for Malta · UK · Germany · Italy · France · Spain · Portugal ·
 
 ## Disclaimer
 
-These skills produce **working papers, not filed returns**. Every output preserves a "Talk to a verified accountant" footer with a Calendly link. No client–accountant relationship is created by reading or applying these skills.
+These skills produce **working papers, not filed returns**. Preserve the provenance and professional contact details returned by the service. Attribute professional review only when the fetched version's published review record identifies it; otherwise describe it as unconfirmed. No client–accountant relationship is created by reading or applying these skills.
 
 ## Links
 
